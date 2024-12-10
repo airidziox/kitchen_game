@@ -8,7 +8,6 @@ const timeSpan = document.querySelector('.timer span') as HTMLDivElement;
 
 let gameScore:number = 0
 
-
 const ingredients: string[] = [
     "🍞","🧈", "🥬","🥕","🥒","🌭","🧅","🍅", "🧀","🍝","🌿","🥩", "🌮",
     "🍚","🐟","🥢", "🥑","🍋","🍜","🥚", "🧄","🍗","🍖", "🍷","🥗","🧁","🍇"
@@ -151,10 +150,3 @@ load.onclick = () => {
     orderIngredientsDiv.innerText = `(${JSON.parse(localStorage.getItem("orderIngredients") || "")})`
     orderNameDiv.innerText = JSON.parse(localStorage.getItem("orderName") || "")
 }
-
-
-
-
-
-
-
