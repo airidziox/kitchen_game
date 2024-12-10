@@ -89,8 +89,8 @@ function generateOrder() {
     orderName = dishes[randomDish].dish
     orderDiv.innerHTML = `
         <div class="order d-flex flex-column border border-2 p-2 rounded-2">
-            <div class="fs-4 orderNameDiv">${dishes[randomDish].dish}</div>
-            <div class="orderIngredientsDiv">(${dishes[randomDish].ingredients})</div>
+            <div class="fs-4 orderNameDiv">${orderName}</div>
+            <div class="orderIngredientsDiv">(${orderIngredients})</div>
         </div>`
 }
 
@@ -142,11 +142,13 @@ save.onclick = () => {
 }
 
 load.onclick = () => {
+    selectedIngredientsDiv.innerHTML = "Table"
     time = JSON.parse(localStorage.getItem("time") || "")
+    timeSpan.innerHTML = `${time}s`
     gameScore = JSON.parse(localStorage.getItem("score") || "")
     scoreSpan.innerHTML = `${gameScore}`
-    timeSpan.innerHTML = `${time}s`
     orderIngredients = JSON.parse(localStorage.getItem("orderIngredients") || "")
-    orderIngredientsDiv.innerText = `(${JSON.parse(localStorage.getItem("orderIngredients") || "")})`
-    orderNameDiv.innerText = JSON.parse(localStorage.getItem("orderName") || "")
+    orderIngredientsDiv.innerHTML = `(${orderIngredients})`
+    orderName = JSON.parse(localStorage.getItem("orderName") || "")
+    orderNameDiv.innerHTML = `${orderName}`
 }
