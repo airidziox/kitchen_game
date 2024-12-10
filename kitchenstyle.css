@@ -1,0 +1,18 @@
+.ingredient:hover {
+    background-color: #89ff89;
+    cursor: pointer;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
+
+.timer {
+    position: absolute;
+    left: 10px;
+}
+
+.save-load {
+    position: absolute;
+    right: 10px;
+}
